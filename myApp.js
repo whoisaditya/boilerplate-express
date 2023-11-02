@@ -25,7 +25,7 @@ app.get('/json', (req, res) => {
         response.toUpperCase();
     } 
 
-    res.send(response)
+    res.json(response)
 })  
 
 module.exports = app;
