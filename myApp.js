@@ -7,12 +7,12 @@ let app = express();
 //     res.send('Hello Express');
 // })
 
-// let absolutePath = __dirname + '/views/index.html'
-// app.get('/', (req, res) => {
-//     res.sendFile(absolutePath);
-// })
+let absolutePath = __dirname + '/views/index.html'
+app.get('/', (req, res) => {
+    res.sendFile(absolutePath);
+})
 
-let absolutePath = __dirname + '/public'
-app.use('/public', express.static(absolutePath));
+// let absolutePath = __dirname + '/public'
+app.use('/public', express.static(__dirname + '/public'));
 
 module.exports = app;
